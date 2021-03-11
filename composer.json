@@ -19,7 +19,7 @@
             "name": "Miklós Galicz",
             "email": "galicz.miklos@blackfyre.ninja",
             "role": "Developer"
-        },
+        }
     ],
     "require": {
         "illuminate/pipeline": "^6.0 || ^7.0 || ^8.0",
