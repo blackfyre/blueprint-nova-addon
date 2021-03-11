@@ -1,11 +1,12 @@
 {
-    "name": "naoray/blueprint-nova-addon",
+    "name": "blackfyre/blueprint-nova-addon",
     "description": "",
     "keywords": [
         "naoray",
+        "blackfyre",
         "blueprint-nova-addon"
     ],
-    "homepage": "https://github.com/naoray/blueprint-nova-addon",
+    "homepage": "https://github.com/blackfyre/blueprint-nova-addon",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -13,7 +14,12 @@
             "name": "Krishan König",
             "email": "krishan.koenig@gmail.com",
             "role": "Developer"
-        }
+        },
+        {
+            "name": "Miklós Galicz",
+            "email": "galicz.miklos@blackfyre.ninja",
+            "role": "Developer"
+        },
     ],
     "require": {
         "illuminate/pipeline": "^6.0 || ^7.0 || ^8.0",
