@@ -49,7 +49,7 @@ class AddRelationshipFields implements Task
 
                 $fields .= ", '".$methodName."', ".$class.'::class';
 
-                $fields .= ')';
+                $fields .= ')->showCreateRelationButton()';
 
                 if ($this->isNullable($reference, $model)) {
                     $fields .= '->nullable()';
