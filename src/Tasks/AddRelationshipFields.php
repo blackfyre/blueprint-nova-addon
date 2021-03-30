@@ -45,11 +45,9 @@ class AddRelationshipFields implements Task
                     $label .= 'able';
                 }
 
-                $fields .= self::INDENT.$fieldType."::make('".$label."'";
+                $fields .= self::INDENT.$fieldType."::make(__('".$label."')";
 
-                if ($fieldType !== 'MorphTo' && $this->classNameNotGuessable($label, $class)) {
-                    $fields .= ", '".$methodName."', ".$class.'::class';
-                }
+                $fields .= ", '".$methodName."', ".$class.'::class';
 
                 $fields .= ')';
 
