@@ -49,7 +49,11 @@ class AddRelationshipFields implements Task
 
                 $fields .= ", '".$methodName."', ".$class.'::class';
 
-                $fields .= ')->showCreateRelationButton()';
+                $fields .= ')';
+                
+                if ($this->canCreateInlineRelation($fieldType)) {
+                    $fields .= '->showCreateRelationButton()';
+                }
 
                 if ($this->isNullable($reference, $model)) {
                     $fields .= '->nullable()';
@@ -112,5 +116,11 @@ class AddRelationshipFields implements Task
         ];
 
         return $fieldTypes[strtolower($dataType)];
+    }
+    
+    private function canCreateInlineRelation(string $dataType): boolean
+    {
+        $canHaveInlineRealtionCreationButton = ['belongsto', 'belongstomany', 'morphto', 'morphmany', 'morphone'];
+        return in_array(strtolower($dataType), $canHaveInlineRealtionCreationButton);
     }
 }
