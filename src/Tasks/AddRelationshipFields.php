@@ -120,7 +120,7 @@ class AddRelationshipFields implements Task
     
     private function canCreateInlineRelation(string $dataType): bool
     {
-        $canHaveInlineRealtionCreationButton = ['belongsto', 'belongstomany', 'morphto', 'morphmany', 'morphone'];
+        $canHaveInlineRealtionCreationButton = ['belongsto', 'morphto'];
         return in_array(strtolower($dataType), $canHaveInlineRealtionCreationButton);
     }
 }
